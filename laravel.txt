@@ -72,3 +72,12 @@ View készítés:
 	php artisan make:migration create_galleries_table --create=galleries
 	php artisan make:migration create_photos_table --create=photos
 							és belenyúlni amik kellenek
+
+
+	Helper: composer.json-ba változtatni kell: 
+	    "require": {
+        "laravelcollective/html": "~5.4.0" (ezt a sort kell hozzáadni)
+    	},
+
+    	és composer update
+
