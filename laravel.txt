@@ -1,0 +1,74 @@
+Laravel jegyzet:
+
+- A Laravel a blade templating rendszert használja.
+- Statikus függvénnyel lehet meghívni az osztályokat pl.: Route::get();
+Leggyorsabb telepítés Composerrel lehetséges.
+Telepítés:	composer create-project laravel/laravel laravel --prefer-dist
+
+Mappákról:
+Routes: web.php		** ide kerülnek azok amiket URL-ből kapunk
+Storage/logs:		** Hibákat látjuk
+
+Controller készítés:
+App/Http/Controllers
+					** Létre tudunk hozni controllereket.
+	Egyszerűen csak hozzunk létre controller fájlt ide:
+	C:\xampp\htdocs\laravel\app\Http\Controllers\controller.php
+	Az ebben lévő classok lefutnak. 
+
+	Pl.: Ha létrehozunk benne egy UsersController függvényt, amit egyébként extendelünk a Laravel keretrendszerhez, akkor az meghívhatóvá válik itt:
+	- laravel/routes/web.php
+	Így hívható meg:
+	- Route::get('users', 'UsersController@get_user');
+	Mi hívható meg? Íme a függvény:
+	class UsersController extends Controller {
+	
+		public function showWelcome()
+		{
+			return View::make('hello');
+		}
+
+		public function get_user()
+		{
+			return 'Hi user';
+		}
+	}
+
+View készítés:
+	A laravel\routes\web.php fájlunkban tudunk meghívni view fájlokat. Pl. az alapértelmezett Laravel template a következőképp hívódik meg ebben:
+
+	Route::get('/', function () {
+	    print "Szia";
+	    return view('welcome');
+	});
+
+	Tehát meghívja a welcomét innen:
+	C:\xampp\htdocs\laravel\resources\views\welcome.blade.php
+
+
+	- Tehetünk ebbe a mappába további bladeket.
+	*pl.: route/web.php -n meghívjuk a view-on belül az users-t:
+
+	Route::get('users', function(){
+		return View::make('users');
+	});
+	*majd az users.blade.php-ba teszünk tartalmat, de további extend-eket tehetünk ezen is belül ami további tartalmakat hív meg. Pl.:
+
+	@extends('layout')
+
+	@section('content')
+		Users!
+	@stop
+
+	*itt fontos, hogy a layout hivatkozásakor ebben a mappában legyen layout.blade.php ais aminek a tartalma lehet html fájl.
+
+	Ez tehát a templating rendszer.
+	*****************************Webtanár***************************
+	.env					ide kerülnek az adatbázis jelszavak
+
+	php artisan config:clrear
+
+							Így hoztam létre az adattáblákat.
+	php artisan make:migration create_galleries_table --create=galleries
+	php artisan make:migration create_photos_table --create=photos
+							és belenyúlni amik kellenek
