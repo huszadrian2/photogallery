@@ -228,8 +228,14 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
+<<<<<<< HEAD
         'Html' => Collective\Html\HtmlFacade::class,
 /* Még több minden */
+=======
+        'Html' => Collective\Html\HtmlFacade::class, 
+        /* valami más */
+
+>>>>>>> brencs
     ],
 
 ];
