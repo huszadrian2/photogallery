@@ -15,7 +15,8 @@
             </div>
           </div>
           <div class="row small-up-2 medium-up-3 large-up-4">
-            <div class="margo">Új képgaléria készítése (űrlap)</div>
+            <div class="margo">Új képgaléria készítése</div>
+
           </div>
 @stop
 
