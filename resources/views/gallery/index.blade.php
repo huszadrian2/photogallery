@@ -1,5 +1,5 @@
 @extends('layouts.main')
-
+{{ $teszt }}
 @section('tartalom')
         <div class="off-canvas-content" data-off-canvas-content>
           <div class="title-bar hide-for-large">

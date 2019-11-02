@@ -31,9 +31,9 @@
       </div>
     </div>
     
-    <script src="/js/jquery-2.1.4.mins"></script>
-    <script src="/js/foundation.js"></script>
-    <script src="/js/app.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/foundation.js"></script>
+    <script src="js/app.js"></script>
     <script>
       $(document).foundation();
     </script>

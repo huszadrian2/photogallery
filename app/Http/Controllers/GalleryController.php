@@ -8,7 +8,8 @@ class GalleryController extends Controller
 {
 
   public function index() {
-    return view('gallery/index');
+    $teszt = "Tesztelünk";
+    return view('gallery/index', compact('teszt'));
   }    
 
   public function create() {
