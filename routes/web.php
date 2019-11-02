@@ -20,4 +20,4 @@ Route::resource('/photo', 'PhotoController');
 Route::get('/photo/details/{id}', 'PhotoController@details');
 
 Route::resource('/create', 'PhotoController');
-Route::get('/gallery/create/{id}', 'PhotoController@details');
+Route::get('/gallery/create/{id}', 'PhotoController@create');

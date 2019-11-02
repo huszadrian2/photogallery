@@ -17,4 +17,8 @@ class PhotoController extends Controller
 	public function details($id) {
 		die($id);
 	}
+
+	public function	index() {
+		die('Szipi szuper vagy :)');
+	}
 }
